@@ -6,6 +6,9 @@ HTTP `Cache-Control` header middleware for standard `Request` and `Response`.
 
 Middleware for HTTP `Content-Control` headers.
 
+Assists in defining type-safe cache directives and safely adds `Cache-Control`
+headers.
+
 Compliant:
 
 - [RFC 9111, 5.2. Cache-Control](https://www.rfc-editor.org/rfc/rfc9111.html#name-cache-control)
