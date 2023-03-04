@@ -1,7 +1,7 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import { Header } from "./deps.ts";
+import { CachingHeader } from "./deps.ts";
 
 export interface CacheDirectives {
   /**
@@ -80,7 +80,7 @@ export function withCacheControl(
   response: Response,
   directives: CacheDirectives & ExtensionDirectives,
 ): Response | Promise<Response> {
-  const hasCacheControl = response.headers.has(Header.CacheControl);
+  const hasCacheControl = response.headers.has(CachingHeader.CacheControl);
 
   if (hasCacheControl) return response;
 
@@ -88,7 +88,7 @@ export function withCacheControl(
 
   if (!cacheControl) return response;
 
-  response.headers.set(Header.CacheControl, cacheControl);
+  response.headers.set(CachingHeader.CacheControl, cacheControl);
 
   return response;
 }

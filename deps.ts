@@ -9,7 +9,4 @@ export {
   isNumber,
 } from "https://deno.land/x/isx@1.0.0-beta.24/mod.ts";
 export { filterValues } from "https://deno.land/std@0.178.0/collections/filter_values.ts";
-
-export enum Header {
-  CacheControl = "cache-control",
-}
+export { CachingHeader } from "https://deno.land/x/http_utils@1.0.0-beta.10/header.ts";
